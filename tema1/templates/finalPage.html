@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<head>
+</head>
+<body >
+
+    <div id = "Titlu">Search here:</div>
+        <form id = "input"  method="POST"  action="{{ url_for('dialogue') }}">
+            <input type="text"  name="lat" value="46.7667">
+            <input type="text" name="long" value="23.6">
+            <button type="submit" >Start</button>
+        </form>
+    {%for item in dialogue%}
+    <div id="city"><p>{{item[0]}}</p></div>
+    <div id="content"><p>{{item[1]}}</p></div>
+        <div id ="tradus"><p>{{item[2]}}<p></div>
+    {%endfor%}
+</body>
+
+</html>
